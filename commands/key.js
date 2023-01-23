@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
-const colors = require("colors");
-colors.enable();
+const chalk = require("chalk");
+
 const KeyManager = require("../lib/KeyManager");
 const { isRequired } = require("../utils/validation");
 
@@ -18,7 +18,7 @@ const key = {
     ]);
     const key = keyManager.setkey(input.key);
     if (key) {
-      console.log(`API Key set`.blue);
+      console.log(chalk.blue(`API Key set`));
     }
   },
   show() {
@@ -27,11 +27,11 @@ const key = {
       const keyManager = new KeyManager();
       const key = keyManager.getKey();
 
-      console.log("Current API Key: ", key.yellow);
+      console.log("Current API Key: ", chalk.yellow(key));
 
       return key;
     } catch (err) {
-      console.error(err.message.red);
+      console.error(chalk.red(err.message));
     }
   },
   remove() {
@@ -40,11 +40,11 @@ const key = {
       const keyManager = new KeyManager();
       keyManager.deleteKey();
 
-      console.log("Key Removed".blue);
+      console.log(chalk.blue("Key Removed"));
 
       return;
     } catch (err) {
-      console.error(err.message.red);
+      console.error(chalk.red(err.message));
     }
   },
 };

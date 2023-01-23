@@ -1,5 +1,6 @@
 const KeyManager = require("../lib/KeyManager");
 const CryptoAPI = require("../lib/CryptoAPI");
+const chalk = require("chalk");
 
 const check = {
   async price(cmd) {
@@ -12,7 +13,7 @@ const check = {
       const priceOutputData = await api.getPriceData(cmd.coin, cmd.cur);
       console.log(priceOutputData);
     } catch (err) {
-      console.error(err.message.red);
+      console.error(chalk.red(err.message));
     }
   },
 };
