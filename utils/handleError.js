@@ -10,4 +10,4 @@ const handleAPIError = function (err) {
   }
 };
 
-module.exports = { handleAPIError };
+export default { handleAPIError };

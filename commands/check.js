@@ -1,7 +1,7 @@
-const KeyManager = require("../lib/KeyManager");
-const CryptoAPI = require("../lib/CryptoAPI");
-const chalk = require("chalk");
-
+import KeyManager from "../lib/KeyManager.js";
+import CryptoAPI from "../lib/CryptoAPI.js";
+import chalk from "chalk";
+let keyManager;
 const check = {
   async price(cmd) {
     // console.log(cmd.coin, cmd.cur);
@@ -18,4 +18,4 @@ const check = {
   },
 };
 
-module.exports = check;
+export default check;

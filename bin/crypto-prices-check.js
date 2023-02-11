@@ -1,5 +1,6 @@
-const program = require("commander");
-const check = require("../commands/check");
+import { program } from "commander";
+import check from "../commands/check.js";
+
 program
   .command("price")
   .description("Check price of coins")

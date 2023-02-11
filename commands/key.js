@@ -1,18 +1,17 @@
-const inquirer = require("inquirer");
-const chalk = require("chalk");
-
-const KeyManager = require("../lib/KeyManager");
-const { isRequired } = require("../utils/validation");
-
+import inquirer from "inquirer";
+import chalk from "chalk";
+import KeyManager from "../lib/KeyManager.js";
+import isRequired from "../utils/validation.js";
 const key = {
   async set() {
     // console.log(`Hello from set`);
-    const keyManager = new KeyManager();
+    let keyManager = new KeyManager();
     const input = await inquirer.prompt([
       {
         type: "input",
         name: "key",
-        message: "Enter API Key ".green + "https://min-api.cryptocompare.com",
+        message:
+          chalk.green("Enter API Key ") + "https://min-api.cryptocompare.com",
         validate: isRequired,
       },
     ]);
@@ -49,4 +48,4 @@ const key = {
   },
 };
 
-module.exports = key;
+export default key;
