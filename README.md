@@ -12,6 +12,10 @@ This project can also be found at https://syntaxsamurai.com
 npm install
 
 npm link
+
+# w/ linux:
+
+sudo npm link
 ```
 
 ## Commands
