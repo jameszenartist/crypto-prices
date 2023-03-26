@@ -11,7 +11,7 @@ const check = {
       const api = new CryptoAPI(key);
 
       const priceOutputData = await api.getPriceData(cmd.coin, cmd.cur);
-      console.log(priceOutputData);
+      if (priceOutputData) console.log(priceOutputData);
     } catch (err) {
       console.error(chalk.red(err.message));
     }
