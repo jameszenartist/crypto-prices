@@ -16,7 +16,8 @@
     "chalk": "^5.2.0",
     "commander": "^10.0.0",
     "configstore": "^6.0.0",
-    "inquirer": "^9.1.4"
+    "inquirer": "^9.1.4",
+    "validate-currency-code": "^0.1.1"
   },
   "devDependencies": {
     "@types/configstore": "^6.0.0",

@@ -28,6 +28,7 @@ crypto-prices -h
 crypto-prices -V
 
 # API Key Commands
+crypto-prices list
 crypto-prices key set
 crypto-prices key show
 crypto-prices key remove
@@ -36,10 +37,10 @@ crypto-prices key remove
 crypto-prices check price
 
 # Check Specific Coins (defaults are: BTC,ETH,XRP)
-crypto-prices check --coin=BTC,ETH
+crypto-prices check price --coin=BTC,ETH
 
 # Choose Currency (Default is: USD)
-crypto-prices check --cur=JPY
+crypto-prices check price --cur=JPY
 ```
 
 ### Version

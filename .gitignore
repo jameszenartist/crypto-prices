@@ -1,4 +1,8 @@
 node_modules
 notes.txt
 api_practice_data
+<<<<<<< HEAD
 .vscode
+=======
+.env
+>>>>>>> error-handling-fix
